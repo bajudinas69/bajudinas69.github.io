@@ -166,44 +166,21 @@
       background: #a52a2a;
     }
 
-    /* === Info Boxes === */
+    /* === Gothic Info Boxes === */
     .info-box {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+      border: 2px solid #800020;
       border-radius: 12px;
       padding: 30px;
       margin: 30px 0;
       text-align: center;
+      box-shadow: 0 0 20px rgba(128, 0, 32, 0.5), inset 0 0 10px rgba(128, 0, 32, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    /* === Newsletter === */
-    .newsletter {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .newsletter input {
-      padding: 10px;
-      width: 50%;
-      border: 1px solid #333;
-      border-radius: 6px;
-      background: #1a1a1a;
-      color: #eee;
-    }
-
-    .newsletter button {
-      padding: 10px 20px;
-      background: #800020;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      margin-left: 10px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .newsletter button:hover {
-      background: #a52a2a;
+    .info-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(128, 0, 32, 0.8), inset 0 0 15px rgba(128, 0, 32, 0.4);
     }
 
     /* === Footer === */
@@ -292,14 +269,6 @@
       <p>📱 Instagram: @darkwear.id</p>
       <p>📍 Alamat: Jl. Fashion Gothic No. 13, Jakarta</p>
     </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="newsletter container">
-    <h2>Berlangganan Newsletter</h2>
-    <p>Dapatkan info promo & koleksi terbaru langsung di email Anda.</p>
-    <input type="email" placeholder="Masukkan email Anda">
-    <button>Subscribe</button>
   </section>
 
   <!-- Footer -->
