@@ -5,27 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DarkWear - Usaha Baju Gothic</title>
   <meta name="description" content="DarkWear - Koleksi baju dengan nuansa gothic. Elegan, misterius, dan stylish.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    /* === Warna & Font === */
+    /* === Base Style === */
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #111; /* hitam pekat */
-      color: #eee;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
+      color: #e6e6e6;
+      line-height: 1.6;
     }
 
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
+      margin: 0 0 15px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* === Header === */
     header {
       background: #1a1a1a;
-      padding: 20px;
+      padding: 20px 40px;
+      border-bottom: 2px solid #800020;
       text-align: center;
-      border-bottom: 2px solid #800020; /* merah marun */
     }
 
     header h1 {
-      margin: 0;
-      color: #e0e0e0;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
+      font-size: 2.2rem;
+      color: #f2f2f2;
+      letter-spacing: 3px;
     }
 
     nav {
@@ -34,9 +48,8 @@
 
     nav a {
       color: #b22222;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      margin: 0 20px;
+      font-weight: 600;
       transition: color 0.3s;
     }
 
@@ -47,76 +60,98 @@
     /* === Hero Section === */
     .hero {
       background: url('https://i.ibb.co/fD9j8ZG/gothic-fashion.jpg') no-repeat center/cover;
-      height: 400px;
+      height: 420px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.65);
     }
 
     .hero h2 {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
+      position: relative;
       color: #fff;
       font-size: 2rem;
+      padding: 20px 30px;
+      border: 2px solid #800020;
       border-radius: 8px;
+      background: rgba(26, 26, 26, 0.7);
     }
 
-    /* === Produk === */
-    .produk {
-      padding: 40px;
-      text-align: center;
+    /* === Section General === */
+    section {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .produk h2 {
+    section h2 {
       color: #b22222;
-      margin-bottom: 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.8rem;
     }
 
+    /* === Produk Grid === */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 30px;
     }
 
     .card {
       background: #1a1a1a;
       border: 1px solid #333;
-      border-radius: 10px;
-      padding: 20px;
-      transition: transform 0.3s;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     }
 
     .card img {
       width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
     }
 
     .card h3 {
-      margin: 10px 0;
       color: #eee;
+      font-size: 1.2rem;
     }
 
     .card p {
       color: #bbb;
+      margin-top: 8px;
     }
 
     /* === Footer === */
     footer {
       background: #1a1a1a;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       border-top: 2px solid #800020;
     }
 
     footer p {
       margin: 0;
       color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -131,44 +166,55 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <h2>Koleksi Baju Gothic Elegan & Stylish</h2>
   </section>
 
   <!-- Produk -->
-  <section class="produk" id="produk">
+  <section id="produk">
     <h2>Koleksi Terbaru</h2>
     <div class="grid">
       <div class="card">
         <img src="https://i.ibb.co/wM6qJZn/gothic-dress.jpg" alt="Dress Gothic">
-        <h3>Gothic Dress</h3>
-        <p>Rp 350.000</p>
+        <div class="card-content">
+          <h3>Gothic Dress</h3>
+          <p>Rp 350.000</p>
+        </div>
       </div>
       <div class="card">
         <img src="https://i.ibb.co/6wR2hJs/gothic-shirt.jpg" alt="Kaos Gothic">
-        <h3>Kaos Gothic</h3>
-        <p>Rp 150.000</p>
+        <div class="card-content">
+          <h3>Kaos Gothic</h3>
+          <p>Rp 150.000</p>
+        </div>
       </div>
       <div class="card">
         <img src="https://i.ibb.co/gF2fd0V/gothic-coat.jpg" alt="Jaket Gothic">
-        <h3>Jaket Gothic</h3>
-        <p>Rp 500.000</p>
+        <div class="card-content">
+          <h3>Jaket Gothic</h3>
+          <p>Rp 500.000</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Tentang -->
-  <section class="produk" id="tentang">
+  <section id="tentang">
     <h2>Tentang Kami</h2>
-    <p>DarkWear adalah brand lokal yang menghadirkan koleksi baju gothic dengan kualitas premium. Desain kami mengutamakan kesan misterius, elegan, dan penuh karakter.</p>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      DarkWear adalah brand lokal yang menghadirkan koleksi baju gothic dengan kualitas premium.
+      Desain kami mengutamakan kesan misterius, elegan, dan penuh karakter untuk Anda yang ingin tampil beda.
+    </p>
   </section>
 
   <!-- Kontak -->
-  <section class="produk" id="kontak">
+  <section id="kontak">
     <h2>Kontak</h2>
-    <p>Email: darkwear@example.com</p>
-    <p>Instagram: @darkwear.id</p>
+    <p style="text-align:center;">
+      📧 Email: darkwear@example.com <br>
+      📱 Instagram: @darkwear.id
+    </p>
   </section>
 
   <!-- Footer -->
