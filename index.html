@@ -21,11 +21,16 @@
 
     h1, h2, h3 {
       font-family: 'Cinzel', serif;
-      margin: 0 0 15px;
     }
 
     a {
       text-decoration: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     /* === Header === */
@@ -40,6 +45,7 @@
       font-size: 2.2rem;
       color: #f2f2f2;
       letter-spacing: 3px;
+      margin: 0;
     }
 
     nav {
@@ -64,8 +70,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       position: relative;
+      text-align: center;
     }
 
     .hero::after {
@@ -85,21 +91,28 @@
       background: rgba(26, 26, 26, 0.7);
     }
 
-    /* === Section General === */
-    section {
-      padding: 60px 40px;
-      max-width: 1200px;
-      margin: auto;
+    /* === Search Bar === */
+    .search-bar {
+      text-align: center;
+      margin: 30px 0;
     }
 
-    section h2 {
-      color: #b22222;
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 1.8rem;
+    .search-bar input {
+      padding: 10px;
+      width: 60%;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #eee;
     }
 
     /* === Produk Grid === */
+    section h2 {
+      text-align: center;
+      color: #b22222;
+      margin-bottom: 40px;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -121,7 +134,7 @@
 
     .card img {
       width: 100%;
-      height: 320px;
+      height: 300px;
       object-fit: cover;
     }
 
@@ -132,12 +145,65 @@
 
     .card h3 {
       color: #eee;
-      font-size: 1.2rem;
     }
 
     .card p {
       color: #bbb;
-      margin-top: 8px;
+      margin: 8px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #800020;
+      color: #fff;
+      border-radius: 6px;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #a52a2a;
+    }
+
+    /* === Info Boxes === */
+    .info-box {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    /* === Newsletter === */
+    .newsletter {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .newsletter input {
+      padding: 10px;
+      width: 50%;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #eee;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      background: #800020;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .newsletter button:hover {
+      background: #a52a2a;
     }
 
     /* === Footer === */
@@ -171,8 +237,13 @@
     <h2>Koleksi Baju Gothic Elegan & Stylish</h2>
   </section>
 
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Cari produk...">
+  </div>
+
   <!-- Produk -->
-  <section id="produk">
+  <section id="produk" class="container">
     <h2>Koleksi Terbaru</h2>
     <div class="grid">
       <div class="card">
@@ -180,6 +251,7 @@
         <div class="card-content">
           <h3>Gothic Dress</h3>
           <p>Rp 350.000</p>
+          <a href="#" class="btn">Beli Sekarang</a>
         </div>
       </div>
       <div class="card">
@@ -187,6 +259,7 @@
         <div class="card-content">
           <h3>Kaos Gothic</h3>
           <p>Rp 150.000</p>
+          <a href="#" class="btn">Beli Sekarang</a>
         </div>
       </div>
       <div class="card">
@@ -194,27 +267,39 @@
         <div class="card-content">
           <h3>Jaket Gothic</h3>
           <p>Rp 500.000</p>
+          <a href="#" class="btn">Beli Sekarang</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Tentang -->
-  <section id="tentang">
+  <section id="tentang" class="container">
     <h2>Tentang Kami</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      DarkWear adalah brand lokal yang menghadirkan koleksi baju gothic dengan kualitas premium.
-      Desain kami mengutamakan kesan misterius, elegan, dan penuh karakter untuk Anda yang ingin tampil beda.
-    </p>
+    <div class="info-box">
+      <p>
+        DarkWear adalah brand lokal yang menghadirkan koleksi baju gothic dengan kualitas premium.
+        Desain kami mengutamakan kesan misterius, elegan, dan penuh karakter untuk Anda yang ingin tampil beda.
+      </p>
+    </div>
   </section>
 
   <!-- Kontak -->
-  <section id="kontak">
+  <section id="kontak" class="container">
     <h2>Kontak</h2>
-    <p style="text-align:center;">
-      📧 Email: darkwear@example.com <br>
-      📱 Instagram: @darkwear.id
-    </p>
+    <div class="info-box">
+      <p>📧 Email: darkwear@example.com</p>
+      <p>📱 Instagram: @darkwear.id</p>
+      <p>📍 Alamat: Jl. Fashion Gothic No. 13, Jakarta</p>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter container">
+    <h2>Berlangganan Newsletter</h2>
+    <p>Dapatkan info promo & koleksi terbaru langsung di email Anda.</p>
+    <input type="email" placeholder="Masukkan email Anda">
+    <button>Subscribe</button>
   </section>
 
   <!-- Footer -->
